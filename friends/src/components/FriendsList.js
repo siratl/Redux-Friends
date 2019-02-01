@@ -2,16 +2,16 @@ import React from 'react';
 
 const FriendsList = props => {
   return (
-    <ul>
+    <div>
       {props.friends.map(friend => (
-        <div key={friend.id}>
-          <span onClick={() => props.showFriend(friend)}>{friend.name}</span>
-          <span onClick={props.removeFriend} id={friend.id}>
-             X
+        <div className='friendCard' key={friend.id}>
+          <span onClick={() => props.showFriend(friend)}><strong>{friend.name}</strong> </span>
+          <span className='deleteBtn' onClick={props.removeFriend} id={friend.id}>
+             delete
           </span>
         </div>
       ))}
-    </ul>
+    </div>
   );
 };
 

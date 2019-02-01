@@ -19,11 +19,12 @@ class FriendsListView extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="friendList">
         {this.props.fetchingFriends && (
           <Loader type="ThreeDots" color="#00BFFF" height="100" width="100" />
         )}
         <FriendsList
+          
           friends={this.props.friends}
           removeFriend={this.removeFriend}
           showFriend={this.showFriend}

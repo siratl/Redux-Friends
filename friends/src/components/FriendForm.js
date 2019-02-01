@@ -1,35 +1,38 @@
 import React from 'react';
+import { Button, Form, Input } from 'reactstrap';
 
 const FriendForm = props => {
   return (
-    <form onSubmit={props.saveFriend} id="friendForm">
-      <input
-        type="text"
-        name="name"
-        onChange={props.handleChange}
-        placeholder="name"
-        value={props.friend.name}
-      />
-      <input
-        type="number"
-        name="age"
-        onChange={props.handleChange}
-        placeholder="age"
-        value={props.friend.age}
-      />
-      <input
-        type="email"
-        name="email"
-        onChange={props.handleChange}
-        placeholder="email"
-        value={props.friend.email}
-      />
-      {!props.editingFriend ? (
-        <button>Add Friend</button>
-      ) : (
-        <button>Update Friend</button>
-      )}
-    </form>
+    <div className='formField' >
+      <Form inline onSubmit={props.saveFriend} id="friendForm">
+        <Input
+          type="text"
+          name="name"
+          onChange={props.handleChange}
+          placeholder="Name"
+          value={props.friend.name}
+        />
+        <Input
+          type="number"
+          name="age"
+          onChange={props.handleChange}
+          placeholder="Age"
+          value={props.friend.age}
+        />
+        <Input
+          type="email"
+          name="email"
+          onChange={props.handleChange}
+          placeholder="Email"
+          value={props.friend.email}
+        />
+        {!props.editingFriend ? (
+          <Button type="submit">Add Friend</Button>
+        ) : (
+          <Button>Update Friend</Button>
+        )}
+      </Form>
+    </div>
   );
 };
 
