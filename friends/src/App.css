@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+  background-color: rgb(29, 36, 65);
+background-size: contain
+}
+
+.App h1 {
+  color: white
+}
+
+.formField {
+  display: flex;
+  justify-content: center;
+
+}
+
+.friendList {
+  border: 2px solid rgb(179, 179, 179);
+  line-height: 2.8;
+  font-size: 17px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+.friendCard {
+  border-bottom: 1px solid rgb(179, 179, 179);
+  text-align: center;
+  color: white;
+}
+
+.deleteBtn {
+  font-size: 10px;
+  color: rgb(150, 150, 150);
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: -5px;
+  float: right;
+
+}
+
+.deleteBtn:hover {
+  color: red
+}
